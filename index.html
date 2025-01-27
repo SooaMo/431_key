@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Text Post Page</title>
+  <title>K·YB··RD</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="Logo" class="logo" />
+    <hr />
+  </header>
   <div class="container">
-    <h1>Question of the Day</h1>
-    <h2>How are you doing?</h2>
+    <h2>Question of the day</h2>
+    <h1>How are you doing?</h1>
     <div class="input-section">
-      <input type="password" id="textInput" placeholder="Type your answer..." />
-      <button id="postButton">Reply</button>
+      <input type="text" id="nameInput" placeholder="Your name" />
+      <textarea id="textInput" placeholder="Type your answer here..."></textarea>
+      <button id="postButton">Post</button>
     </div>
+  </div>
+  <div class="container_a">
+    <h2>Comments</h2>
     <div class="output-section" id="outputSection">
       <!-- Posted texts will appear here -->
     </div>
