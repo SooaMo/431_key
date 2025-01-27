@@ -18,6 +18,7 @@ body {
     padding: 10px 20px;
     position: absolute;
     top: 0;
+    background-color: #151515;
   }
   
   .logo {
@@ -67,6 +68,17 @@ body {
     margin-bottom:0;
   }
   
+  footer {
+    width: 100%;
+    text-align: center;
+    background-color: #292929;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed; /* Sticks footer to the bottom of the page */
+    bottom: 0;
+    left: 0;
+  }
+
   .input-section {
     display: flex;
     flex-direction: column;
