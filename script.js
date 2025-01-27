@@ -2,15 +2,8 @@ const nameInput = document.getElementById('nameInput');
 const textInput = document.getElementById('textInput');
 const postButton = document.getElementById('postButton');
 const outputSection = document.getElementById('outputSection');
-const resetButton = document.getElementById('resetButton');
 
-// Load saved posts from localStorage
-window.onload = () => {
-  const savedPosts = JSON.parse(localStorage.getItem('posts')) || [];
-  savedPosts.reverse().forEach(post => displayPost(post)); // Reverse to show oldest at bottom, newest at top
-};
-
-// Save and display a new post
+// Add a new post when the Post button is clicked
 postButton.addEventListener('click', () => {
   const name = nameInput.value.trim();
   const text = textInput.value.trim();
@@ -21,11 +14,6 @@ postButton.addEventListener('click', () => {
 
     // Create a new post object
     const post = { time: timeString, name: name, text: text };
-
-    // Save to localStorage
-    const savedPosts = JSON.parse(localStorage.getItem('posts')) || [];
-    savedPosts.unshift(post); // Add new post to the beginning of the array
-    localStorage.setItem('posts', JSON.stringify(savedPosts));
 
     // Display the post
     displayPost(post);
@@ -63,11 +51,3 @@ function displayPost(post) {
   // Add the post to the top of the output section
   outputSection.prepend(postContainer);
 }
-
-// Reset button functionality
-resetButton.addEventListener('click', () => {
-  if (confirm('Are you sure you want to delete all posts?')) {
-    localStorage.removeItem('posts'); // Clear localStorage
-    outputSection.innerHTML = ''; // Clear the output section
-  }
-});
