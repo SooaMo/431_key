@@ -13,25 +13,30 @@ body {
   
   header {
     width: 100%;
-    max-width: 1200px;
-    text-align: left;
-    padding: 10px 20px;
-    position: absolute;
+    display: flex;
+    justify-content: space-between; /* Space between logo and reset button */
+    align-items: center;
+    padding: 0 20px; /* Remove top and bottom padding, keep left and right padding */
+    margin: 0; /* Remove default margins */
+    position: fixed; /* Keeps header always visible at the top */
     top: 0;
-    background-color: #151515;
-  }
-  
-  .logo {
-    height: 50px;
-    display: block;
-    margin-bottom: 10px;
+    left: 0;
+    background-color: #151515; /* Background color for header */
+    z-index: 1000; /* Ensure the header stays above other content */
   }
   
   header hr {
     border: 0;
     height: 1px;
-    background: #444;
-    margin: 0;
+    background: #d1d1d1;
+    margin: 0; /* Remove margin from the horizontal line */
+  }
+  
+  .logo {
+    height: 50px;
+    position: absolute;
+    top: 10px; 
+    left: 100px;
   }
   
   .container {
@@ -41,7 +46,7 @@ body {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 90%;
-    max-width: 400px;
+    max-width: 600px;
   }
 
   .container_a {
@@ -51,7 +56,7 @@ body {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 90%;
-    max-width: 400px;
+    max-width: 600px;
   }
   
   h1 {
@@ -168,3 +173,21 @@ body {
     margin: 0;
   }
   
+  #resetButton {
+    position: absolute; /* Absolute positioning within the header */
+    top: 20px; /* Small gap from the top */
+    right: 100px; /* Align to the right edge with a small gap */
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 8px; /* Compact padding for smaller button size */
+    border-radius: 5px;
+    font-size: 14px; /* Smaller font size for a compact look */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto; /* Automatically adjust width to fit content */
+  }
+  
+  #resetButton:hover {
+    background-color: #c0392b; /* Darker red on hover */
+  }
