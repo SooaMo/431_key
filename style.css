@@ -33,8 +33,9 @@ body {
   }
   
   .logo {
-    height: 50px; /* Logo size */
+    height: 35px; /* Logo size */
     display: block;
+    margin-top:10px;
   }
   
   @media (min-width: 601px) {
